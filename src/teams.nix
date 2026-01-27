@@ -1,0 +1,75 @@
+# Teams follow the nixpkgs format which is here: https://github.com/NixOS/nixpkgs/blob/9833ce188fdb61ddc3047fe150896c03b6354891/maintainers/team-list.nix#L3-L20
+# However some teams we combine. Like teaclient-frontend would be teaclient.frontend
+{
+  members,
+  ...
+}:
+with members;
+{
+  # keep-sorted start case=no numeric=no block=yes newline_separated=yes
+
+  #NOTE: this team gets added to all teams when computed
+  owner = {
+    members = [
+      eveeifyeve
+    ];
+    scope = "Owner of DigitalBrewStudios";
+    shortName = "Owner";
+  };
+
+  infra = {
+    members = [
+      klsjns
+    ];
+    scope = "A Team that manages the internals of DigitalBrewStudios";
+    shortName = "Infra";
+    enableFeatureFreezePing = true;
+  };
+
+  treefmt = {
+    members = [
+      eveeifyeve
+      "4a42"
+    ];
+    scope = "Team that manages the treefmt issues";
+    shortName = "Treefmt";
+    github = "Treefmt-nix";
+  };
+
+  # === TeaClient ===
+  # ------------
+  teaclient-designers = {
+    members = [ ray ];
+    github = "@TeaClient/Designers";
+    scope = "Team that does TeaClient Designs";
+    enableFeatureFreezePing = true;
+  };
+
+  teaclient-frontend = {
+    members = [
+      blackwulf
+    ];
+    github = "@TeaClientMC/Frontend";
+    scope = "Maintains/Develops TeaClient Frontend";
+    enableFeatureFreezePing = true;
+  };
+
+  teaclient-backend = {
+    members = [
+      klsjns
+    ];
+    github = "@TeaClientMC/Backend";
+    scope = "Maintains/Develops TeaClient Backend";
+    enableFeatureFreezePing = true;
+  };
+
+  teaclient-java-client = {
+    members = [
+      dergamer
+    ];
+    github = "@TeaClientMC/Backend";
+    enableFeatureFreezePing = true;
+  };
+
+  # keep-sorted end
+}
