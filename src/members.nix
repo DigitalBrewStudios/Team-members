@@ -41,7 +41,7 @@ in
   };
 
   dergamer = {
-    name = "Phillipp";
+    name = "Phillipp Jäger";
     role = "Volunteer TeaClient Java-Client Developer";
     github_id = 119887852;
     discord_id = 1033714515377934386;
