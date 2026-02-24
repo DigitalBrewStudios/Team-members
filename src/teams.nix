@@ -78,5 +78,15 @@ rec {
     enableFeatureFreezePing = true;
   };
 
+  visionzero-dsc-bot = {
+    github = "@VisionZeroEsp/Dsc-Bot";
+    scope = "Maintains the discord bot for vision zero";
+  };
+
+  visionzero-web = {
+    github = "@VisionZeroEsp/Web";
+    scope = "Maintains the website for vision zero";
+  };
+
   # keep-sorted end
 }
